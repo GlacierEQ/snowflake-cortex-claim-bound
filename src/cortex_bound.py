@@ -48,7 +48,7 @@ class CortexClaimBound:
         return digest(
             {
                 "text": claim.text,
-                "cited_query_ids": list(claim.cited_query_ids),
+                "cited_query_ids": sorted(claim.cited_query_ids),
             }
         )
 
