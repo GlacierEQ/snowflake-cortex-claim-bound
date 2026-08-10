@@ -1,0 +1,56 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/snowflake-cortex-claim-bound",
+  "position_state": "RESOLVED",
+  "role": "CANONICAL_SPECIALIST",
+  "company_target": "Snowflake",
+  "canonical_identity": "cortex-claim-bound",
+  "owns": "registered_query_citation_claim_fence",
+  "unique_value": [
+    "natural-language claim text is bound to a canonicalized unique query-ID citation set",
+    "empty, duplicate, absent and unknown citations fail closed",
+    "the accepted query-ID registry has an independent deterministic fingerprint",
+    "allow/refuse receipts bind exact claim identity, registry identity, normalized citations and refusal evidence",
+    "SQL fixtures enforce non-empty local claim/citation identities while documenting the missing external registry foreign-key boundary"
+  ],
+  "does_not_own": [
+    "query purpose/downstream-use authorization",
+    "query execution or result retrieval",
+    "semantic entailment between query result and natural-language claim",
+    "Snowflake Cortex execution or deployment"
+  ],
+  "capability_contribution": {
+    "family": "query_citation_claim_fencing",
+    "extractable_mechanisms": [
+      "exact_claim_identity_fingerprint",
+      "unique_registered_query_citation_gate",
+      "query_registry_fingerprint",
+      "claim_registry_bound_decision_receipt",
+      "citation_order_normalization",
+      "unknown_duplicate_empty_citation_refusal"
+    ],
+    "ownership": "Canonical Snowflake-lens specialist for registered-query citation fencing of natural-language data claims."
+  },
+  "relationships": [
+    {
+      "repository": "GlacierEQ/snowflake-query-intent-ledger",
+      "relation": "COMPOSES_WITH",
+      "integration_exercised": false,
+      "boundary": "query-intent purpose/use policy is separate from claim citation registration"
+    }
+  ],
+  "next_evolution": "Bind full query-intent fingerprints and immutable query-result evidence into each cited claim, then prove result-aware semantic support without collapsing query-use governance into this claim fence.",
+  "evidence_refs": [
+    "src/cortex_bound.py",
+    "tests/test_cortex_bound.py",
+    "sql/cortex_claims.sql",
+    "ISSUE_CONTRACT.md",
+    "machine/target-contract.json"
+  ],
+  "nonclaims": [
+    "no Snowflake affiliation",
+    "registered citation does not prove semantic support",
+    "no query execution or result verification",
+    "no exercised integration with the query-intent ledger"
+  ]
+}
