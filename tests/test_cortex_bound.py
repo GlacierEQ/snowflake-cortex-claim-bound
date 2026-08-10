@@ -57,14 +57,14 @@ class CortexTests(unittest.TestCase):
         first = bound.check(DataClaim("revenue up", ("q1", "q2")))
         second = bound.check(DataClaim("revenue up", ("q2", "q1")))
         self.assertTrue(first.ok and second.ok)
-        # Claim fingerprints preserve caller citation order, but the terminal
-        # result normalizes citations only after validating uniqueness.
-        self.assertNotEqual(first.claim_fingerprint, second.claim_fingerprint)
-        self.assertNotEqual(first.fingerprint, second.fingerprint)
+        self.assertEqual(first.claim_fingerprint, second.claim_fingerprint)
+        self.assertEqual(first.fingerprint, second.fingerprint)
 
     def test_invalid_registry_refuses_at_construction(self):
         with self.assertRaises(ValueError):
-            CortexClaimBound({"q1", ""})
+            CortexClaimBound(["q1", ""])
+        with self.assertRaises(ValueError):
+            CortexClaimBound(["q1", "q1"])
 
 
 if __name__ == "__main__":
