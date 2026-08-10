@@ -2,21 +2,59 @@
   "schema": "glaciereq.repo-target-contract.v1",
   "identity": {
     "repository_id": "GlacierEQ/snowflake-cortex-claim-bound",
-    "family": "elite-estate"
+    "family": "query_citation_claim_fencing"
   },
   "current": {
     "state": "PROMOTED",
     "implemented": true,
     "tested": true,
-    "deployed": false
+    "deployed": false,
+    "canonical_position_pending_exact_head_proof": true
   },
-  "nonclaims": [
-    "no employer affiliation",
-    "no production deployment without receipt"
+  "target": {
+    "purpose": "Require every natural-language data claim to bind exact claim identity to unique registered query citations and the exact accepted query registry before passing the citation gate.",
+    "central_bottleneck": "A citation ID without claim identity or registry identity cannot establish which statement and which accepted query namespace were actually checked, while missing/duplicate/unknown citations can make audit trails ambiguous.",
+    "success": [
+      "Empty claims and absent citations refuse.",
+      "Empty, duplicate, and unknown query citations refuse.",
+      "Citation order is canonicalized for claim identity.",
+      "Exact claim text and unique citation set are fingerprinted.",
+      "Accepted query registry identity is independently fingerprinted.",
+      "Every result binds claim identity, registry identity, citations, and refusal evidence.",
+      "The public claim remains citation registration rather than semantic entailment."
+    ]
+  },
+  "invariants": [
+    "non-empty claim text",
+    "one or more unique non-empty citations",
+    "every citation must exist in accepted registry",
+    "citation order does not change canonical claim identity",
+    "claim identity and registry identity are receipt-bound",
+    "registered citation does not imply semantic support"
   ],
   "donor_plan": {
-    "mode": "none",
-    "donors": []
+    "status": "RESOLVED",
+    "strategy": "INDEPENDENT_MECHANISM_PRESERVED",
+    "donors": [
+      {
+        "repository": "GlacierEQ/snowflake-query-intent-ledger",
+        "reuse_mode": "REFERENCE_ARCHITECTURE",
+        "boundary": "future full query-intent fingerprints may replace the current query-ID registry, but no integration is yet exercised"
+      }
+    ]
   },
-  "frozen_at": "2026-08-10T04:12Z"
+  "promotion": {
+    "required_tests": ["python-unit", "sql-fixture", "canonical-position"],
+    "require_exact_source_sha": true,
+    "require_receipt": true,
+    "require_nonclaims": true,
+    "next_gate": "CANONICAL_POSITION_RESOLVED"
+  },
+  "nonclaims": [
+    "no Snowflake affiliation",
+    "not a production Snowflake Cortex claim service",
+    "no query execution or result verification",
+    "registered citation does not prove semantic entailment",
+    "no exercised integration with snowflake-query-intent-ledger"
+  ]
 }
