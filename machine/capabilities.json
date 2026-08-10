@@ -1,1 +1,14 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/snowflake-cortex-claim-bound",
+  "family": "query_citation_claim_fencing",
+  "capabilities": [
+    "exact_claim_identity_fingerprint",
+    "unique_registered_query_citation_gate",
+    "query_registry_fingerprint",
+    "claim_registry_bound_decision_receipt",
+    "citation_order_normalization",
+    "unknown_duplicate_empty_citation_refusal"
+  ],
+  "truth_boundary": "Citation-registration claim fence only. It does not execute queries, verify query results, prove semantic entailment, authorize downstream query use, execute Snowflake Cortex, or claim Snowflake adoption."
+}
