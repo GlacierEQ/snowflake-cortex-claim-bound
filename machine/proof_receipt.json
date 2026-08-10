@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/snowflake-cortex-claim-bound",
+  "source_sha": "723c043bf8facfcd525d0ea41d33c9ca683457de13baa6ba9028d4aa1bbb3774",
+  "proof_id": "elite-snowflake-cortex-claim-bound-1786335149",
+  "environment": {
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/snowflake-cortex-claim-bound:/Users/kcbflux/job-app/repos/snowflake-cortex-claim-bound/src",
+    "entry": "unittest"
+  },
+  "tests": [
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-10T04:12Z",
+  "artifact_hashes": {
+    "operability_receipt": "844a1e566963de44db2c137631981c769700576a2fb6086dc02bf974c3197e3a"
+  }
+}

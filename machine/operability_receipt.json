@@ -1,0 +1,26 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/snowflake-cortex-claim-bound",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "723c043bf8facfcd525d0ea41d33c9ca683457de13baa6ba9028d4aa1bbb3774",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "module": "cortex_bound",
+    "ok": true,
+    "repository": "GlacierEQ/snowflake-cortex-claim-bound",
+    "smoke": {
+      "args": [
+        "DataClaim(text='sample_text', cited_quer"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "class",
+      "method": "check",
+      "module_local": true,
+      "name": "CortexClaimBound",
+      "result": "BoundResult(ok=False, reason='UNKNOWN_QUERY', fingerprint='00521d1149a134a5d9568bc38ca92c480e8b6f609baaedde7e7b5d331e260f8e')"
+    }
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}

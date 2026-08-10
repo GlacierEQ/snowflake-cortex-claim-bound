@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/snowflake-cortex-claim-bound",
+  "source_sha": "723c043bf8facfcd525d0ea41d33c9ca683457de13baa6ba9028d4aa1bbb3774",
+  "proof_receipt_digest": "5e2267dbcad9f1776523c01d5d2c22ec69b55c872cff4e0735b8564d92a79251",
+  "not_after": 1788927149.234226,
+  "mac": "37cd397f953cecd81e3150ba0c4d22867ced1acb17184c0632046f58b108f790",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}
