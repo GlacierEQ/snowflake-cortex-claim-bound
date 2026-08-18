@@ -1,13 +1,13 @@
 {
-  "schema": "glaciereq.repo-canonical-position.v1",
+  "schema": "glaciereq.repo-apex-position.v1",
   "repository": "GlacierEQ/snowflake-cortex-claim-bound",
   "position_state": "RESOLVED",
-  "role": "CANONICAL_SPECIALIST",
+  "role": "APEX_SPECIALIST",
   "company_target": "Snowflake",
-  "canonical_identity": "cortex-claim-bound",
+  "apex_identity": "cortex-claim-bound",
   "owns": "registered_query_citation_claim_fence",
   "unique_value": [
-    "natural-language claim text is bound to a canonicalized unique query-ID citation set",
+    "natural-language claim text is bound to a apexized unique query-ID citation set",
     "empty, duplicate, absent and unknown citations fail closed",
     "the accepted query-ID registry has an independent deterministic fingerprint",
     "allow/refuse receipts bind exact claim identity, registry identity, normalized citations and refusal evidence",
@@ -29,7 +29,7 @@
       "citation_order_normalization",
       "unknown_duplicate_empty_citation_refusal"
     ],
-    "ownership": "Canonical Snowflake-lens specialist for registered-query citation fencing of natural-language data claims."
+    "ownership": "APEX Snowflake-lens specialist for registered-query citation fencing of natural-language data claims."
   },
   "relationships": [
     {

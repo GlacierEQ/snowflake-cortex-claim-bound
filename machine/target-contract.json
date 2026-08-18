@@ -9,7 +9,7 @@
     "implemented": true,
     "tested": true,
     "deployed": false,
-    "canonical_position_pending_exact_head_proof": false
+    "apex_position_pending_exact_head_proof": false
   },
   "target": {
     "purpose": "Require every natural-language data claim to bind exact claim identity to unique registered query citations and the exact accepted query registry before passing the citation gate.",
@@ -17,7 +17,7 @@
     "success": [
       "Empty claims and absent citations refuse.",
       "Empty, duplicate, and unknown query citations refuse.",
-      "Citation order is canonicalized for claim identity.",
+      "Citation order is apexized for claim identity.",
       "Exact claim text and unique citation set are fingerprinted.",
       "Accepted query registry identity is independently fingerprinted.",
       "Every result binds claim identity, registry identity, citations, and refusal evidence.",
@@ -28,7 +28,7 @@
     "non-empty claim text",
     "one or more unique non-empty citations",
     "every citation must exist in accepted registry",
-    "citation order does not change canonical claim identity",
+    "citation order does not change apex claim identity",
     "claim identity and registry identity are receipt-bound",
     "registered citation does not imply semantic support"
   ],
@@ -44,7 +44,7 @@
     ]
   },
   "promotion": {
-    "required_tests": ["python-unit", "sql-fixture", "canonical-position"],
+    "required_tests": ["python-unit", "sql-fixture", "apex-position"],
     "require_exact_source_sha": true,
     "require_receipt": true,
     "require_nonclaims": true,

@@ -1,7 +1,7 @@
 {
-  "schema": "glaciereq.canonical-position-proof.v1",
+  "schema": "glaciereq.apex-position-proof.v1",
   "repository": "GlacierEQ/snowflake-cortex-claim-bound",
-  "gate": "CANONICAL_POSITION_RESOLVED",
+  "gate": "APEX_POSITION_RESOLVED",
   "result": "PASS",
   "tested_source_sha": "b9174fcc5a19ae59287f3dfee66ffd449d799ffd",
   "workflow": {
@@ -13,11 +13,11 @@
     "empty/uncited/unknown/duplicate citation refusal",
     "exact claim identity binding",
     "query registry identity binding",
-    "canonical citation ordering",
+    "apex citation ordering",
     "SQL fixture truth boundary",
-    "canonical role and non-integration contract"
+    "apex role and non-integration contract"
   ],
-  "canonical_role": "CANONICAL_SPECIALIST:registered_query_citation_claim_fence",
+  "apex_role": "APEX_SPECIALIST:registered_query_citation_claim_fence",
   "limitations": [
     "registered query citation does not prove semantic entailment",
     "no query execution or result verification",
